@@ -1,41 +1,16 @@
-# Smart Home Automation with Arduino — Circuit Schematic
+# Smart Home Automation With Arduino — Circuit Notes
 
-- Course: Smart Home Automation with Arduino
-- Author: Ashraf S A AlMadhoun
-- Link: https://www.udemy.com/course/arduino-smart-home-automation-with-arduino/?couponCode=JULYMAXDICOUNT
+| Signal | Suggested Pin | Notes |
+| --- | --- | --- |
+| Sensor Input | A0 / GPIO | Adjust according to the Arduino board you own. |
+| Actuator Output | D9 / PWM Pin | Use a transistor/driver for high-current loads. |
+| Status LED | D13 or onboard LED | Mirrors the runtime state for quick debugging. |
 
-## Connections
+## Wiring Checklist
 
-- Arduino `D2` → Relay Module 1 `IN`
-- Arduino `D3` → Relay Module 2 `IN`
-- Arduino `D4` → Button (to GND), with internal pull-up
-- Arduino `5V` → Relay VCC, Button VCC (if external pull-up used)
-- Arduino `GND` → Relay GND, Button GND
+1. Power rails first (5V / 3.3V and GND).
+2. Route sensor outputs to the analog/digital pin noted above.
+3. Add current-limiting resistors where appropriate.
+4. Double-check common grounds between modules and the development board.
 
-## Diagram (ASCII)
-
-```
-         +-----------------------+
-         |       Arduino UNO     |
-         |                       |
-     D2 o|----> Relay1 IN        |
-     D3 o|----> Relay2 IN        |
-     D4 o|----> [Button]---GND   |
-     5V o|----> Relay VCC        |
-    GND o|----> Relay GND        |
-         +-----------------------+
-
- Relay1: VCC->5V, GND->GND, IN->D2
- Relay2: VCC->5V, GND->GND, IN->D3
- Button: One side -> D4, other side -> GND (INPUT_PULLUP)
-```
-
-## Notes
-
-- Use relay modules with optocouplers when switching mains loads.
-- Keep mains wiring isolated and follow safety standards.
-
-## Purchase With Discount
-
-Unlock the full course with a discounted price — use the link above and start building now.
-
+Refer to the course lecture for the exact schematic; reuse these notes as a quick reference.

@@ -1,3 +1,11 @@
+/*
+ * Course: Smart Home Automation With Arduino
+ * Platform: Arduino
+ * Author: Ashraf S A AlMadhoun
+ * Purpose: Auto-generated metadata block to document the learning goals.
+ * Notes: Auto-generated metadata block (2025-11-18)
+ */
+
 #include <stdio.h> // Include standard I/O for illustrative serial prints
 
 // Define Arduino-like constants and stubs so the logic reads clearly
@@ -86,6 +94,7 @@ void loop(void) { // Main control loop
 }
 
 // Illustrative main to show call sequence on non-Arduino C targets
+// Main routine: orchestrates the smart home automation with arduino scenario
 int main(void) { // Program entry point
   setup(); // Initialize system
   for (int i = 0; i < 10; ++i) { // Simulate limited loop iterations
